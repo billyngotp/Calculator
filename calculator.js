@@ -1,21 +1,26 @@
 class Calculator{
     constructor(num){
-        this.num =num;
+        this.num = num;
     }
     add(num){
-        return this.num + num;
+        this.num += num;
+        return this;
     }
     subtract(num){
-        return this.num -= num;
+        this.num -= num;
+        return this;
     }
     multiply(num){
-        return this.num *= num;
+        this.num *= num;
+        return this;
     }
     divide(num){
-        return this.num /= num;
+        this.num /= num;
+        return this;
     }
     clear(){
-        return this.num = 0;
+        this.num = 0;
+        return this;
     }
     equals(){
         return this.num;
