@@ -31,4 +31,24 @@ describe('calculator', () => {
         expect(subject.clear().multiply(10).equals()).toEqual(0);
     });
 
+    test('Test RPN command to calculate Polish Notation', () => {
+        const subject = new calculator();
+        expect(subject.rpn("5 3 + 6 - 2 *")).toEqual(4);
+    });
+
+    test('Test RPN command to calculate 1+2', () => {
+        const subject = new calculator();
+        expect(subject.rpn("1 2 +")).toEqual(3);
+    });
+
+    test('Test RPN command to evaluate 0', () => {
+        const subject = new calculator();
+        expect(subject.rpn()).toEqual(0);
+    });
+
+    test('Test RPN command to 1 2 + 7 - 2 *', () => {
+        const subject = new calculator();
+        expect(subject.rpn("1 2 + 7 - 2 *")).toEqual(-8);
+    });
+    
 })

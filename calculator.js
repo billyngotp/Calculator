@@ -25,6 +25,57 @@ class Calculator{
     equals(){
         return this.num;
     }
+    rpn(equation="") {
+        
+        if (equation === "") {
+            equation = 0;
+            return equation
+        }
+        //evaluate the equation
+        else{ 
+            //calculations
+            let output = equation.split(" ").slice();
+            handleResult(output);
+            function handleResult(calc) {
+                if(calc.length <= 1){
+                    return calc
+                }
+                else {
+                    let result = parseInt(calc[0])
+                    let secNum = parseInt(calc[1])
+                    let operand = calc[2]
+                    if(operand === "+") {
+                        result += secNum; 
+                    }
+                    else if (operand === "-") {
+                        result -= secNum;
+                    }
+
+                    else if (operand === "*") {
+                        result *= secNum;
+                    }
+
+                    else if (operand === "/") {
+                        result /= secNum;
+                    }
+                    calc.shift()
+                    calc.shift()
+                    calc[0] = result;
+
+                    return handleResult(calc)
+                }
+            }
+            //console.log(output)
+            return parseInt(output)
+        }
+        
+    }
 }
+
+//const test = new Calculator(5);
+//console.log(test);
+//console.log(test.rpn("0"))
+//console.log(test.rpn("5 3 + 6 - 2 *"))
+
 
 module.exports = Calculator
