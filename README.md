@@ -3,14 +3,14 @@
 
 
 
-##Description : Calculator.js will act as a calculator to use addition, subtraction, multiplication, and division to add numbers
+## Description : Calculator.js will act as a calculator to use addition, subtraction, multiplication, and division to add numbers
 
-##Objective : 
+## Objective : 
     Practice Unit testing with Jest
     Practice with Javascript
     Practice with Recursion (kinda)
 
-##Functions : 
+## Functions : 
     .add()
     .subtract()
     .multiply()
