@@ -50,5 +50,10 @@ describe('calculator', () => {
         const subject = new calculator();
         expect(subject.rpn("1 2 + 7 - 2 *")).toEqual(-8);
     });
+
+    test('Test RPN command to evaluate 12 10 5 + is 27', () => {
+        const subject = new calculator();
+        expect(subject.rpn('12 10 5 +')).toEqual(27);
+    });
     
 })
