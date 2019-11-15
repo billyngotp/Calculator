@@ -1,9 +1,6 @@
 # Calculator
 
-
-
-
-## Description : Calculator.js will act as a calculator to use addition, subtraction, multiplication, and division to add numbers
+## Description : calculator.js will act as a calculator to use addition, subtraction, multiplication, and division to add numbers
 
 ## Objective : 
     Practice Unit testing with Jest
