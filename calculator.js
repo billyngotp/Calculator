@@ -37,57 +37,53 @@ class Calculator{
             let output = equation.split(" ").slice();
 
 
-            function handleResult(equation) {
-                let stack = [];
-                console.log(equation[0].isInteger + " is integer");
-                if(equation.length === 1 && equation[0].isInteger) {
-                    return parseInt(equation);
-                }
-                else {
+            // function handleResult(equation) {
+            //     let stack = [];
+            //     console.log(equation[0].isInteger + " is integer");
+            //     if(equation.length === 1 && equation[0].isInteger) {
+            //         return parseInt(equation);
+            //     }
+            //     else {
                     
-                }
+            //     }
 
-
-                
-
-
-            }
+            // }
 
             return handleResult(output);
 
 
-            // handleResult(output);
-            // function handleResult(calc) {
-            //     if(calc.length <= 1){
-            //         return calc
-            //     }
-            //     else {
-            //         let result = parseInt(calc[0])
-            //         let secNum = parseInt(calc[1])
-            //         let operand = calc[2]
-            //         if(operand === "+") {
-            //             result += secNum; 
-            //         }
-            //         else if (operand === "-") {
-            //             result -= secNum;
-            //         }
+            handleResult(output);
+            function handleResult(calc) {
+                if(calc.length <= 1){
+                    return calc
+                }
+                else {
+                    let result = parseInt(calc[0])
+                    let secNum = parseInt(calc[1])
+                    let operand = calc[2]
+                    if(operand === "+") {
+                        result += secNum; 
+                    }
+                    else if (operand === "-") {
+                        result -= secNum;
+                    }
 
-            //         else if (operand === "*") {
-            //             result *= secNum;
-            //         }
+                    else if (operand === "*") {
+                        result *= secNum;
+                    }
 
-            //         else if (operand === "/") {
-            //             result /= secNum;
-            //         }
-            //         calc.shift()
-            //         calc.shift()
-            //         calc[0] = result;
+                    else if (operand === "/") {
+                        result /= secNum;
+                    }
+                    calc.shift()
+                    calc.shift()
+                    calc[0] = result;
 
-            //         return handleResult(calc)
-            //     }
-            // }
-            // //console.log(output)
-            // return parseInt(output)
+                    return handleResult(calc)
+                }
+            }
+            //console.log(output)
+            return parseInt(output)
         }
         
     }
